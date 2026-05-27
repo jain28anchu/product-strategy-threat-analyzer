@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Strategy Threat Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="container">
+
+  <h1>Product Strategy Threat Analyzer</h1>
+
+  <p class="subtitle">
+    Analyze strategic threats, competitive pressure, second-order effects, and recommended product responses for senior PM strategy decisions.
+  </p>
+
+  <div class="card">
+    <div class="input-group">
+      <label>Company / Product *</label>
+      <input type="text" id="companyName" placeholder="Example: YouTube, SoFi, Adobe GenStudio" />
+    </div>
+
+    <div class="input-group">
+      <label>Market Type *</label>
+      <select id="marketType">
+        <option value="">Select Market</option>
+        <option>Consumer Tech</option>
+        <option>Enterprise SaaS</option>
+        <option>Fintech</option>
+        <option>Marketplace</option>
+        <option>AI Platform</option>
+        <option>Media / Entertainment</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Primary Business Goal</label>
+      <select id="businessGoal">
+        <option value="">Leave blank for recommendation</option>
+        <option>Grow Users</option>
+        <option>Increase Revenue</option>
+        <option>Improve Retention</option>
+        <option>Defend Market Share</option>
+        <option>Expand Platform Adoption</option>
+        <option>Launch AI Capabilities</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Competitive Pressure</label>
+      <select id="competitivePressure">
+        <option value="">Leave blank for recommendation</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Time Horizon</label>
+      <select id="timeHorizon">
+        <option value="">Leave blank for recommendation</option>
+        <option>Next 6 Months</option>
+        <option>Next 12 Months</option>
+        <option>Next 3 Years</option>
+        <option>Next 5 Years</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Known Competitor / Threat</label>
+      <input type="text" id="knownThreat" placeholder="Optional — example: TikTok, OpenAI, Stripe, Databricks" />
+    </div>
+
+    <div class="button-row">
+      <button onclick="generateStrategy()">Generate Strategy Analysis</button>
+      <button class="secondary-btn" onclick="generateStrategy()">Generate Another Analysis</button>
+      <button class="secondary-btn" onclick="copyOutput()">Copy Output</button>
+      <button class="secondary-btn" onclick="downloadText()">Download TXT</button>
+    </div>
+  </div>
+
+  <div class="output-card">
+    <div id="output" class="output-placeholder">
+      Your strategy analysis will appear here.
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
